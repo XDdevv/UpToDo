@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ImageStyle_Circle" >
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="ImageStyle_Corners_Rounded" >
+        <item name="cornerSize">20dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorControlActivated">#000</item>
+        <item name="android:colorActivatedHighlight">#fff</item>
+        <item name="android:textColorPrimary">#000</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@drawable/calendar_date_selector</item>
+
+    </style>
+
+    <style name="CalenderViewWeekCustomText" >
+        <item name="android:textColor">#fff</item>
+    </style>
+
+</resources>

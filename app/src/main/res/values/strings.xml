@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">TasksApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_for_your_task">Search for your task...</string>
+    <string name="do_math_homework">Do Math Homework</string>
+    <string name="today_at_16_45">Today At 16:45</string>
+    <string name="_1">1</string>
+    <string name="index">Index</string>
+    <string name="today">Today</string>
+    <string name="completed">Completed</string>
+    <string name="what_do_you_want_to_do_today">What do you want to do today?</string>
+    <string name="tap_to_add_your_tasks">Tap + to add your tasks</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="do_some_thing">Do some thing</string>
+    <string name="university">University</string>
+    <string name="delete_task">Delete Task</string>
+    <string name="default_1">Default</string>
+    <string name="task_category">Task Category :</string>
+    <string name="task_time">Task Time :</string>
+    <string name="do_chapter_2_to_5_for_next_week">Do chapter 2 to 5 for next week</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="task_priority">Task Priority</string>
+    <string name="edit">Edit</string>
+    <string name="edit_task_title">Edit Task title</string>
+    <string name="choose_category">Choose Category</string>
+    <string name="grocery">Grocery</string>
+    <string name="add_category">Add Category</string>
+    <string name="create_new_category">Create new category</string>
+    <string name="category_name">Category name :</string>
+    <string name="category_name_1">Category name</string>
+    <string name="create_category">Create Category</string>
+    <string name="calendar">Calendar</string>
+</resources>

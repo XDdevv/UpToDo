@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TasksApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#121212</item>
+        <item name="colorPrimaryVariant">#121212</item>
+        <item name="colorAccent">#121212</item>
+        <item name="statusBarBackground">#121212</item>
+    </style>
+
+    <style name="Theme.TasksApp" parent="Base.Theme.TasksApp" />
+</resources>

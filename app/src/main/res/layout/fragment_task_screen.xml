@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="12dp"
+    tools:context=".ui.fragments.TaskScreenFragment">
+
+    <ImageView
+        android:id="@+id/closeIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#1D1D1D"
+        android:contentDescription="@string/app_name"
+        android:padding="4dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ellipseIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:contentDescription="@string/app_name"
+        android:padding="8dp"
+        android:src="@drawable/ic_ellipse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/closeIv" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/do_math_homework"
+        android:textColor="#DEFFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/ellipseIv"
+        app:layout_constraintStart_toEndOf="@id/ellipseIv"
+        app:layout_constraintTop_toTopOf="@id/ellipseIv" />
+
+    <TextView
+        android:id="@+id/descriptionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/ubuntu_regular"
+        android:text="@string/do_chapter_2_to_5_for_next_week"
+        android:textColor="#afafaf"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/ellipseIv"
+        app:layout_constraintTop_toBottomOf="@id/titleTv" />
+
+    <ImageView
+        android:id="@+id/timeIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/app_name"
+        android:padding="8dp"
+        android:src="@drawable/ic_timer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTv" />
+
+    <TextView
+        android:id="@+id/timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_regular"
+        android:text="@string/task_time"
+        android:textColor="#DEFFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/timeIv"
+        app:layout_constraintStart_toEndOf="@id/timeIv"
+        app:layout_constraintTop_toTopOf="@id/timeIv" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/timeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn"
+        android:contentDescription="@string/app_name"
+        android:fontFamily="@font/ubuntu_medium"
+        android:paddingHorizontal="8dp"
+        android:text="@string/today_at_16_45"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="@id/timeIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/timeIv" />
+
+    <ImageView
+        android:id="@+id/categoryIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/app_name"
+        android:padding="8dp"
+        android:src="@drawable/ic_category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeIv" />
+
+    <TextView
+        android:id="@+id/categoryTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:fontFamily="@font/ubuntu_regular"
+        android:text="@string/task_category"
+        android:textColor="#DEFFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/categoryIv"
+        app:layout_constraintStart_toEndOf="@id/categoryIv"
+        app:layout_constraintTop_toTopOf="@id/categoryIv" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/categoryBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn"
+        android:contentDescription="@string/app_name"
+        android:fontFamily="@font/ubuntu_medium"
+        android:paddingHorizontal="8dp"
+        android:text="@string/university"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="@id/categoryIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/categoryIv" />
+
+    <ImageView
+        android:id="@+id/flagIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/app_name"
+        android:padding="8dp"
+        android:src="@drawable/ic_flag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoryIv" />
+
+    <TextView
+        android:id="@+id/flagTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_regular"
+        android:text="@string/task_category"
+        android:textColor="#DEFFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/flagIv"
+        app:layout_constraintStart_toEndOf="@id/flagIv"
+        app:layout_constraintTop_toTopOf="@id/flagIv" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/flagBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn"
+        android:fontFamily="@font/ubuntu_medium"
+        android:paddingHorizontal="8dp"
+        android:text="@string/default_1"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="@id/flagIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/flagIv" />
+
+    <ImageView
+        android:id="@+id/deleteIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/app_name"
+        android:padding="8dp"
+        android:src="@drawable/ic_trash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flagIv" />
+
+    <TextView
+        android:id="@+id/deleteTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:fontFamily="@font/ubuntu_regular"
+        android:text="@string/delete_task"
+        android:textColor="#FF4949"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/deleteIv"
+        app:layout_constraintStart_toEndOf="@id/deleteIv"
+        app:layout_constraintTop_toTopOf="@id/deleteIv" />
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/editBtn"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/bg_btn"-->
+<!--        android:fontFamily="@font/ubuntu_bold"-->
+<!--        android:text="@string/edit_task"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="#fff"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

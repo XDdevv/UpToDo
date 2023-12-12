@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="24dp"
+    tools:context=".ui.fragments.MainFragment">
+
+    <ImageView
+        android:id="@+id/sortIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_sort"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/index"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/sortIv"
+        app:layout_constraintEnd_toStartOf="@+id/shapeableImageView"
+        app:layout_constraintStart_toEndOf="@id/sortIv"
+        app:layout_constraintTop_toTopOf="@id/sortIv" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="#999"
+        android:src="@drawable/ic_thing"
+        android:tint="#fff"
+        app:contentPadding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ImageStyle_Circle" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mainCl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/titleTv">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/searchEt"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/bg_search"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:hint="@string/search_for_your_task"
+                android:importantForAutofill="no"
+                android:padding="10dp"
+                android:textColor="#fff"
+                android:textColorHint="#AFAFAF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/todayTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_btn"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:fontFamily="@font/ubuntu_bold"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="8dp"
+                android:text="@string/today"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/searchEt" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/todayTv"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_task" />
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:id="@+id/completedTv"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:background="@drawable/bg_btn"-->
+<!--                android:drawableEnd="@drawable/ic_arrow_down"-->
+<!--                android:drawablePadding="10dp"-->
+<!--                android:fontFamily="@font/ubuntu_bold"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:paddingHorizontal="8dp"-->
+<!--                android:text="@string/completed"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="#fff"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/list_today" />-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/list_completed"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginVertical="8dp"-->
+<!--                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/completedTv"-->
+<!--                tools:itemCount="3"-->
+<!--                tools:listitem="@layout/item_task" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/emptyCl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/addTaskBtn"
+        app:layout_constraintTop_toBottomOf="@id/titleTv">
+
+        <ImageView
+            android:id="@+id/emptyImgIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_list"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".4" />
+
+        <TextView
+            android:id="@+id/tit1Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/what_do_you_want_to_do_today"
+            android:textColor="#DEFFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emptyImgIv" />
+
+        <TextView
+            android:id="@+id/tit2Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="@string/tap_to_add_your_tasks"
+            android:textColor="#DEFFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tit1Tv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/addTaskBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/background_add_button"
+        android:contentDescription="@string/app_name"
+        android:padding="4dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#ffffff" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
